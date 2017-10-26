@@ -10,12 +10,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  */
 
 @IonicPage()
+
 @Component({
   selector: 'page-pomodoro',
   templateUrl: 'pomodoro.html',
 })
 export class PomodoroPage {
-
+  interval: number;
   public fillerHeight: number;
   public fillerIncrement: number;
   public seconds: number;
@@ -28,7 +29,7 @@ export class PomodoroPage {
     this.seconds = 0;
     this.fillerIncrement = 200/(this.minutes*60);
     this.fillerHeight = 0; 
-    this.init(); 
+    this.init();
   }
 
   resetVariables(mins, secs, started){
@@ -73,12 +74,11 @@ toDoubleDigit(num){
 };
 
 init(){
-  self = this;
+  var self = this;
   this.interval = setInterval( function(){
     self.intervalCallback.apply(self);
   }, 1000);
 };
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PomodoroPage');
