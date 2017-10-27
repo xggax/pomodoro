@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PomodoroPageModule } from '../pages/pomodoro/pomodoro.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { IntroPageModule } from '../pages/intro/intro.module';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     PomodoroPageModule,
-    IntroPageModule
+    IntroPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
