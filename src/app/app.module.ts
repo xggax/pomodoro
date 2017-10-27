@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PomodoroPageModule } from '../pages/pomodoro/pomodoro.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import {HttpModule} from "@angular/http";
+import { ConfigProvider } from '../providers/config/config';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {HttpModule} from "@angular/http";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConfigProvider
   ]
 })
 export class AppModule {}
