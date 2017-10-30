@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Burndown Chart
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div id="container" style="display: block;"></div>
+  <!--<ion-list>
+    <ion-item>
+      <ion-label color="primary" fixed>Dias</ion-label>
+      <ion-input [(ngModel)]="dias" type="number" placeholder="Número de dias"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" fixed>Pontos</ion-label>
+      <ion-input [(ngModel)]="pontos" type="number" placeholder="Números de pontos"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Título</ion-label>
+      <ion-input [(ngModel)]="titulo" placeholder="Título do Burndown Chart"></ion-input>
+    </ion-item>
+    <button ion-button>Criar Burndown Chart</button>
+  </ion-list>-->
+  <ion-list>
+    <form [formGroup]="inserirdados" (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>Título</ion-label>
+        <ion-input type="text" name="titulo" formControlName="idtitulo" placeholder="Título do Burndown Chart"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pontos</ion-label>
+        <ion-input type="number" formControlName="idpontos" placeholder="Números de pontos"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dias</ion-label>
+        <ion-input type="number" formControlName="iddias" placeholder="Número de dias"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!inserirdados.valid">Criar Burndown Chart</button>
+    </form>
+  </ion-list>
+</ion-content>

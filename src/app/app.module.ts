@@ -16,6 +16,7 @@ import {HttpModule} from "@angular/http";
 import { ConfigProvider } from '../providers/config/config';
 import { PomodorogeralPageModule } from '../pages/pomodorogeral/pomodorogeral.module';
 import { PomodorosobrePageModule } from '../pages/pomodorosobre/pomodorosobre.module';
+import { BurndownPageModule } from '../pages/burndown/burndown.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PomodorosobrePageModule } from '../pages/pomodorosobre/pomodorosobre.mo
     IntroPageModule,
     HttpModule,
     PomodorogeralPageModule,
-    PomodorosobrePageModule
+    PomodorosobrePageModule,
+    BurndownPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
