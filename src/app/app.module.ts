@@ -14,6 +14,8 @@ import { PomodoroPageModule } from '../pages/pomodoro/pomodoro.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import {HttpModule} from "@angular/http";
 import { ConfigProvider } from '../providers/config/config';
+import { PomodorogeralPageModule } from '../pages/pomodorogeral/pomodorogeral.module';
+import { PomodorosobrePageModule } from '../pages/pomodorosobre/pomodorosobre.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ConfigProvider } from '../providers/config/config';
     IonicModule.forRoot(MyApp),
     PomodoroPageModule,
     IntroPageModule,
-    HttpModule
+    HttpModule,
+    PomodorogeralPageModule,
+    PomodorosobrePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

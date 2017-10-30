@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 //import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 import { PomodoroPage } from '../pomodoro/pomodoro';
+import { PomodorogeralPage } from '../pomodorogeral/pomodorogeral';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -13,7 +14,7 @@ export class TabsPage {
   tab1Root = HomePage;
   //tab2Root = AboutPage;
   //tab3Root = ContactPage;
-  tab4Root = PomodoroPage;
+  tab4Root = PomodorogeralPage;
 
   constructor() {
 
