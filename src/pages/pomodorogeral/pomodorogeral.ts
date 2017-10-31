@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { PomodoroPage } from '../pomodoro/pomodoro';
 import { PomodorosobrePage } from '../pomodorosobre/pomodorosobre';
 
@@ -19,7 +19,7 @@ export class PomodorogeralPage {
   
   rootPage = PomodoroPage;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -29,5 +29,10 @@ export class PomodorogeralPage {
   abrirSobre(){
     this.navCtrl.push(PomodorosobrePage);
   }
+
+  fecharMenu(){
+    this.menuCtrl.close();
+  }
+
 
 }
