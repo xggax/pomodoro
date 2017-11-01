@@ -3,10 +3,10 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title>
+    <!--<ion-title>
       Page Title
     </ion-title>
-
+    -->
     <ion-buttons end>
       <button ion-button icon-only (click)="openModal()">
         <ion-icon name="options"></ion-icon>
@@ -26,13 +26,13 @@
         Home
       </button>-->
       <button ion-item (click)=" abrirSobre(pomodorosobrePage)">
-        Sobre
+        <ion-icon name="arrow-forward"></ion-icon> Sobre
       </button>
       <!--<button ion-item (click)="openPage(eventsPage)">
         Events
       </button>-->
       <button ion-item (click)="fecharMenu()">
-        Fechar <ion-icon name="close-circle"></ion-icon>
+        <ion-icon name="arrow-forward"></ion-icon> Fechar Menu
       </button>
     </ion-list>
   </ion-content>

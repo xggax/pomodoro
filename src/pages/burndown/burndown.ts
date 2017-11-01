@@ -82,7 +82,7 @@ export class BurndownPage {
           lineWidth: 2,
           data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
         }, {
-          name: 'Actual Burn',
+          name: 'Atual Burn',
           color: 'rgba(0,120,200,0.75)',
           marker: {
             radius: 6
