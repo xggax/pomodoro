@@ -6,6 +6,7 @@ import { HomePage } from '../home/home';
 //import { PomodoroPage } from '../pomodoro/pomodoro';
 import { PomodorogeralPage } from '../pomodorogeral/pomodorogeral';
 import { BurndownPage } from '../burndown/burndown';
+import { ScrumcardsPage } from '../scrumcards/scrumcards';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -15,6 +16,7 @@ export class TabsPage {
   tab1Root = HomePage;
   tab2Root = PomodorogeralPage;
   tab3Root = BurndownPage;
+  tab4Root = ScrumcardsPage;
 
   constructor() {
 

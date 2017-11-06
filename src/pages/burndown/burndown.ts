@@ -34,7 +34,7 @@ export class BurndownPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BurndownPage');
     
-      HighCharts.chart('container', {
+      let chart = HighCharts.chart('container', {
         title: {
           text: 'Burndown Chart',
           x: -20 //center
@@ -49,7 +49,7 @@ export class BurndownPage {
           }
         },
         subtitle: {
-          text: 'Sprint 1',
+          text: 'Sprint',
           x: -20
         },
         xAxis: {
@@ -90,7 +90,7 @@ export class BurndownPage {
           data: [100, 110, 85, 60, 60, 30, 32, 23, 9, 2]
         }]
       });
-
+      
   }
 
 }

@@ -17,6 +17,7 @@ import { ConfigProvider } from '../providers/config/config';
 import { PomodorogeralPageModule } from '../pages/pomodorogeral/pomodorogeral.module';
 import { PomodorosobrePageModule } from '../pages/pomodorosobre/pomodorosobre.module';
 import { BurndownPageModule } from '../pages/burndown/burndown.module';
+import { ScrumcardsPageModule } from '../pages/scrumcards/scrumcards.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BurndownPageModule } from '../pages/burndown/burndown.module';
     HttpModule,
     PomodorogeralPageModule,
     PomodorosobrePageModule,
-    BurndownPageModule
+    BurndownPageModule,
+    ScrumcardsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
