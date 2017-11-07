@@ -2,4 +2,14 @@ page-home {
     .center{
         text-align: center;
     }
+
+    #topButtons{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #topButtons button{
+        flex: 1;
+    }
+
 }

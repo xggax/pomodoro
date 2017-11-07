@@ -18,6 +18,8 @@ import { PomodorogeralPageModule } from '../pages/pomodorogeral/pomodorogeral.mo
 import { PomodorosobrePageModule } from '../pages/pomodorosobre/pomodorosobre.module';
 import { BurndownPageModule } from '../pages/burndown/burndown.module';
 import { ScrumcardsPageModule } from '../pages/scrumcards/scrumcards.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ScrumcardsPageModule } from '../pages/scrumcards/scrumcards.module';
     PomodorogeralPageModule,
     PomodorosobrePageModule,
     BurndownPageModule,
-    ScrumcardsPageModule
+    ScrumcardsPageModule,
+    LoginPageModule,
+    CadastroPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
