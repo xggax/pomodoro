@@ -6,6 +6,7 @@ import {ConfigProvider} from "../providers/config/config";
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { IntroPage } from '../pages/intro/intro';
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html',
@@ -30,7 +31,8 @@ export class MyApp {
         this.rootPage = IntroPage;
         configProvider.setConfigData(false);
       }else{ 
-          this.rootPage = TabsPage;
+          //this.rootPage = TabsPage;
+          this.rootPage = HomePage;
       }
       console.log(config);
       statusBar.styleDefault();

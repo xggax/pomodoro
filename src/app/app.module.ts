@@ -20,6 +20,19 @@ import { BurndownPageModule } from '../pages/burndown/burndown.module';
 import { ScrumcardsPageModule } from '../pages/scrumcards/scrumcards.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
+const firebaseAuth = {
+  apiKey: "AIzaSyC3CCU6rdRrvhvgDsdUcvZCHu2Psv8Talo",
+  authDomain: "eduscrum-a1e71.firebaseapp.com",
+  databaseURL: "https://eduscrum-a1e71.firebaseio.com",
+  projectId: "eduscrum-a1e71",
+  storageBucket: "eduscrum-a1e71.appspot.com",
+  messagingSenderId: "251682295628"
+};
+
 
 @NgModule({
   declarations: [
@@ -40,7 +53,9 @@ import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
     BurndownPageModule,
     ScrumcardsPageModule,
     LoginPageModule,
-    CadastroPageModule
+    CadastroPageModule,
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

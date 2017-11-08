@@ -14,6 +14,8 @@ Já dentro do diretório clonado:
 
 3)  npm install highcharts –-save
 
+4)  npm install angularfire2 firebase --save
+
 Para rodar no browser:
 
-4)  ionic serve
+5)  ionic serve

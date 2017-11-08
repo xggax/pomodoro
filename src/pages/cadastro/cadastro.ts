@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 /**
  * Generated class for the CadastroPage page.
@@ -19,7 +20,7 @@ export class CadastroPage {
   @ViewChild('nomeusuario') nomeusuario;
   @ViewChild('senha') senha;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -29,7 +30,15 @@ export class CadastroPage {
 
 
   cadastrarUsuario(){
-    console.log('cadastrando: ', this.nomeusuario.value, this.senha.value);
+    this.fire.auth.createUserWithEmailAndPassword(this.nomeusuario.value, this.senha.value)
+    .then(data =>{
+      console.log('pegou arquivo', data);
+    })
+    .catch(error => {
+      console.log('pegou um erro', error);
+    })
+
+      console.log('cadastrando: ', this.nomeusuario.value, this.senha.value);
   }
 
 }
