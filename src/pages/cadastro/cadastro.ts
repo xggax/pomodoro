@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -15,11 +15,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CadastroPage {
 
+
+  @ViewChild('nomeusuario') nomeusuario;
+  @ViewChild('senha') senha;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastroPage');
+  }
+
+
+
+  cadastrarUsuario(){
+    console.log('cadastrando: ', this.nomeusuario.value, this.senha.value);
   }
 
 }
