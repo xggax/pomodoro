@@ -20,8 +20,12 @@ import { BurndownPageModule } from '../pages/burndown/burndown.module';
 import { ScrumcardsPageModule } from '../pages/scrumcards/scrumcards.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
+
+
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthData } from '../providers/auth/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 const firebaseAuth = {
@@ -54,8 +58,9 @@ const firebaseAuth = {
     ScrumcardsPageModule,
     LoginPageModule,
     CadastroPageModule,
+    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseAuth),
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,8 +73,9 @@ const firebaseAuth = {
   providers: [
     StatusBar,
     SplashScreen,
+    AuthData,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ConfigProvider
+    ConfigProvider,
   ]
 })
 export class AppModule {}
