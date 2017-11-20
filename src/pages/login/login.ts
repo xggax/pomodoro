@@ -43,7 +43,7 @@ export class LoginPage {
     this.fire.auth.signInWithEmailAndPassword(this.nomeusuario.value, this.senha.value)
       .then(data => {
         console.log('pegou o data', data);
-        this.alert('Sucesso! Você está logado');
+        this.alert('Agora você está logado!');
         this.navCtrl.setRoot(TabsPage);
         //usuario está logado
       })
@@ -56,7 +56,5 @@ export class LoginPage {
     console.log('Acessando com: ', this.nomeusuario.value, this.senha.value);
 
   }
-
-
 
 }

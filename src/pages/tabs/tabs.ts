@@ -7,13 +7,14 @@ import { HomePage } from '../home/home';
 import { PomodorogeralPage } from '../pomodorogeral/pomodorogeral';
 import { BurndownPage } from '../burndown/burndown';
 import { ScrumcardsPage } from '../scrumcards/scrumcards';
+import { PerfilPage } from '../perfil/perfil';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
+  tab1Root = PerfilPage;
   tab2Root = PomodorogeralPage;
   tab3Root = BurndownPage;
   tab4Root = ScrumcardsPage;

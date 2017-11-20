@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+//import { TabsPage } from '../tabs/tabs';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the IntroPage page.
@@ -23,8 +24,8 @@ export class IntroPage {
     console.log('ionViewDidLoad IntroPage');
   }
 
-  goToTabsPage() {
-    this.navCtrl.push(TabsPage)
+  goToHomePage() {
+    this.navCtrl.push(HomePage);
   }
 
 

@@ -20,12 +20,14 @@ import { BurndownPageModule } from '../pages/burndown/burndown.module';
 import { ScrumcardsPageModule } from '../pages/scrumcards/scrumcards.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
-
+import { PerfilPageModule } from '../pages/perfil/perfil.module';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AuthData } from '../providers/auth/auth';
+//import { AuthData } from '../providers/auth/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { RecuperarPage } from '../pages/recuperar/recuperar';
+import { RecuperarPageModule } from '../pages/recuperar/recuperar.module';
 
 
 const firebaseAuth = {
@@ -58,6 +60,8 @@ const firebaseAuth = {
     ScrumcardsPageModule,
     LoginPageModule,
     CadastroPageModule,
+    RecuperarPageModule,
+    PerfilPageModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
@@ -73,7 +77,7 @@ const firebaseAuth = {
   providers: [
     StatusBar,
     SplashScreen,
-    AuthData,
+    //AuthData,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConfigProvider,
   ]
