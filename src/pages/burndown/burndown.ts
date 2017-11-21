@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import * as HighCharts from 'highcharts';
@@ -17,6 +17,8 @@ import * as HighCharts from 'highcharts';
 export class BurndownPage {
 
   public inserirdados: FormGroup;
+  @ViewChild('pontos') pontos;
+  @ViewChild('dias') dias;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
     this.inserirdados = this.formBuilder.group(
@@ -95,8 +97,8 @@ export class BurndownPage {
         data: (function() { 
         const ideal = [];
         let i: number;
-        const totalSprintEstimativa = 144;
-        const totalDias = 10;
+        const totalSprintEstimativa = this.pontos;
+        const totalDias = this.dias;
         //let totalSprintEstimativa = this.inserirdados.value.idpontos;
         //let totalDias = this.inserirdados.value.iddias;
         const idealIncrement = totalSprintEstimativa / totalDias;
@@ -106,7 +108,7 @@ export class BurndownPage {
         console.log(ideal.reverse());
         return ideal;
         //[100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
-      }())}, 
+      }())}/*, 
       
       
       {
@@ -116,7 +118,7 @@ export class BurndownPage {
           radius: 6
         },
         data: [100, 110, 85, 60, 60, 30, 32, 23, 9, 2]
-      }]
+      }*/]
     });
 
   }

@@ -22,7 +22,10 @@
     </ion-item>
     <button ion-button>Criar Burndown Chart</button>
   </ion-list>-->
-  <br><br>
+  
+  
+  
+  <!--<br><br>
   <ion-list>
     <form [formGroup]="inserirdados" (ngSubmit)="logForm()">
       <ion-item>
@@ -43,3 +46,22 @@
     </form>
   </ion-list>
 </ion-content>
+-->
+
+<ion-list>
+  
+    <ion-item>
+      <ion-label floating>Pontos</ion-label>
+      <ion-input type="number" #pontos></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Dias</ion-label>
+      <ion-input type="number" #dias></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <button block ion-button (click)="logForm()">Gerar</button>
+  </div>

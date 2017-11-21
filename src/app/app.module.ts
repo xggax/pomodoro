@@ -28,6 +28,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { RecuperarPage } from '../pages/recuperar/recuperar';
 import { RecuperarPageModule } from '../pages/recuperar/recuperar.module';
+import { BurndowngeralPageModule } from '../pages/burndowngeral/burndowngeral.module';
 
 
 const firebaseAuth = {
@@ -57,6 +58,7 @@ const firebaseAuth = {
     PomodorogeralPageModule,
     PomodorosobrePageModule,
     BurndownPageModule,
+    BurndowngeralPageModule,
     ScrumcardsPageModule,
     LoginPageModule,
     CadastroPageModule,
@@ -65,6 +67,7 @@ const firebaseAuth = {
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
