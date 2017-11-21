@@ -30,23 +30,6 @@ export class BurndownPage {
   }
 
   logForm() {
-    /*this.inserirdados.value.idpontos = 144;
-    this.inserirdados.value.iddias = 20;
-    let i: number;
-    console.log(this.inserirdados.value);
-    let totalSprintEstimativa = this.inserirdados.value.idpontos;
-    let totalDias = this.inserirdados.value.iddias;
-    console.log(totalDias, totalSprintEstimativa);
-    let idealIncrement = totalSprintEstimativa / totalDias;
-    let ideal = [];
-    for (i = 0; i <= totalDias - 1; i++) {
-      ideal.push(idealIncrement * i);
-    }
-  console.log(ideal.reverse());*/
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BurndownPage');
 
     HighCharts.chart('container', {
       title: {
@@ -67,8 +50,11 @@ export class BurndownPage {
         x: -20
       },
       xAxis: {
-        categories: ['Dia 1', 'Dia 2', 'Dia 3', 'Dia 4', 'Dia 5', 'Dia 6',
-          'Dia 7', 'Dia 8', 'Dia 9', 'Dia 10']
+        title: {
+          text: 'Dias'
+        },
+        categories: []/*['Dia 1', 'Dia 2', 'Dia 3', 'Dia 4', 'Dia 5', 'Dia 6',
+          'Dia 7', 'Dia 8', 'Dia 9', 'Dia 10']*/
       },
       yAxis: {
         title: {
@@ -94,21 +80,21 @@ export class BurndownPage {
         name: 'Ideal Burn',
         color: 'rgba(255,0,0,0.25)',
         lineWidth: 2,
-        data: (function() { 
+        data: (() =>{ 
         const ideal = [];
         let i: number;
-        const totalSprintEstimativa = this.pontos;
-        const totalDias = this.dias;
+        let totalSprintEstimativa = this.pontos.value;
+        let totalDias = this.dias.value;
         //let totalSprintEstimativa = this.inserirdados.value.idpontos;
         //let totalDias = this.inserirdados.value.iddias;
-        const idealIncrement = totalSprintEstimativa / totalDias;
+        let idealIncrement = totalSprintEstimativa / totalDias;
         for (i = 0; i <= totalDias - 1; i++) {
           ideal.push(idealIncrement * i);
         }
         console.log(ideal.reverse());
         return ideal;
         //[100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
-      }())}/*, 
+      })()}/*, 
       
       
       {
@@ -120,7 +106,10 @@ export class BurndownPage {
         data: [100, 110, 85, 60, 60, 30, 32, 23, 9, 2]
       }*/]
     });
+  }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad BurndownPage');
   }
 
 }
