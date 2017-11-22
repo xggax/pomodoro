@@ -31,8 +31,8 @@ import { RecuperarPageModule } from '../pages/recuperar/recuperar.module';
 import { BurndowngeralPageModule } from '../pages/burndowngeral/burndowngeral.module';
 
 import { IonicStorageModule } from '@ionic/storage';
-import { ListatarefasgeralPageModule } from '../pages/listatarefasgeral/listatarefasgeral.module';
-import { TarefasPageModule } from '../pages/tarefas/tarefas.module';
+//import { ListatarefasgeralPageModule } from '../pages/listatarefasgeral/listatarefasgeral.module';
+//import { TarefasPageModule } from '../pages/tarefas/tarefas.module';
 import { ListatarefasPage } from '../pages/listatarefas/listatarefas';
 import { TarefasPage } from '../pages/tarefas/tarefas';
 

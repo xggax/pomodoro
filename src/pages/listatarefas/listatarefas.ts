@@ -4,7 +4,7 @@ import { TarefasPage } from '../tarefas/tarefas';
 import { Storage } from '@ionic/storage';
 
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-listatarefas',
   templateUrl: 'listatarefas.html',

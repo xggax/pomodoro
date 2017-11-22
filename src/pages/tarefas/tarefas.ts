@@ -4,7 +4,7 @@ import { Validators, FormGroup, FormControl} from '@angular/forms';
 import { Storage } from '@ionic/storage';
 import { ListatarefasPage } from '../listatarefas/listatarefas';
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-tarefas',
   templateUrl: 'tarefas.html',
