@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        Adicionar Tarefa
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+  <form>
+      <ion-item>
+      <ion-label floating>Título da tarefa</ion-label>
+      <ion-input type="text" name="title" [(ngModel)]="title" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label floating>Descrição da tarefa</ion-label>
+      <ion-textarea rows="5" name="description" [(ngModel)]="description" required>
+      </ion-textarea>
+      </ion-item>
+    <div class="row">
+      <div class="col col-50">
+        <button ion-button (click)="saveRecords()" block>Salvar</button>
+      </div>
+    </div>
+  </form>
+</ion-list>
+</ion-content>

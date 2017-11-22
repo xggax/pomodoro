@@ -19,6 +19,7 @@ export class BurndownPage {
   public inserirdados: FormGroup;
   @ViewChild('pontos') pontos;
   @ViewChild('dias') dias;
+  @ViewChild('titulo') titulo;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
     this.inserirdados = this.formBuilder.group(
@@ -33,7 +34,7 @@ export class BurndownPage {
 
     HighCharts.chart('container', {
       title: {
-        text: 'Burndown Chart',
+        text: this.titulo.value,
         x: -20 //center
       },
       colors: ['blue', 'red'],

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>
+          Lista de Tarefas
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <ion-item-sliding *ngFor="let todo of addedToDoList">
+          
+        <ion-item>
+                <ion-card>
+                        
+                          <ion-card-header text-wrap>
+                                {{todo.title}}
+                          </ion-card-header>
+                        
+                          <ion-card-content text-wrap>
+                                {{todo.description}}
+                          </ion-card-content>
+                        
+                </ion-card>
+        </ion-item>
+
+          <ion-item-options side="right">
+              <button ion-button color="danger" (click)="removeItem(todo)">
+              <ion-icon name="delete"></ion-icon>
+                  Excluir
+              </button>
+          </ion-item-options>
+      </ion-item-sliding>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="goToAddTodo()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

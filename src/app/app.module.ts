@@ -30,6 +30,13 @@ import { RecuperarPage } from '../pages/recuperar/recuperar';
 import { RecuperarPageModule } from '../pages/recuperar/recuperar.module';
 import { BurndowngeralPageModule } from '../pages/burndowngeral/burndowngeral.module';
 
+import { IonicStorageModule } from '@ionic/storage';
+import { ListatarefasgeralPageModule } from '../pages/listatarefasgeral/listatarefasgeral.module';
+import { TarefasPageModule } from '../pages/tarefas/tarefas.module';
+import { ListatarefasPage } from '../pages/listatarefas/listatarefas';
+import { TarefasPage } from '../pages/tarefas/tarefas';
+
+
 
 const firebaseAuth = {
   apiKey: "AIzaSyC3CCU6rdRrvhvgDsdUcvZCHu2Psv8Talo",
@@ -47,7 +54,9 @@ const firebaseAuth = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ListatarefasPage,
+    TarefasPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +76,9 @@ const firebaseAuth = {
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
-    
+    IonicStorageModule.forRoot()
+    //ListatarefasgeralPageModule,
+    //TarefasPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -75,7 +86,9 @@ const firebaseAuth = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ListatarefasPage,
+    TarefasPage
   ],
   providers: [
     StatusBar,
