@@ -32,7 +32,7 @@ export class LoginPage {
 
   alert(mensagem: string){
     this.alertCtrl.create({
-      title: 'Info!',
+      //title: 'Info!',
       subTitle: mensagem,
       buttons: ['OK']
     }).present();

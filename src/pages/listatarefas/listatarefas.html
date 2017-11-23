@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
       <ion-title>
           Lista de Tarefas
       </ion-title>
@@ -7,14 +7,14 @@
 </ion-header>
 
 <ion-content padding>
+    <h5>#Tarefas</h5>
     <ion-list>
-      <ion-item-sliding *ngFor="let todo of addedToDoList">
-          
+      <ion-item-sliding *ngFor="let todo of addedToDoList"> 
         <ion-item>
                 <ion-card>
-                        
+                          
                           <ion-card-header text-wrap>
-                                {{todo.title}}
+                                <b>{{todo.title}}</b>
                           </ion-card-header>
                         
                           <ion-card-content text-wrap>
@@ -32,7 +32,8 @@
           </ion-item-options>
       </ion-item-sliding>
   </ion-list>
+  <hr>
   <ion-fab right bottom>
-    <button ion-fab color="danger" (click)="goToAddTodo()"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab color="secondary" (click)="goToAddTodo()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 </ion-content>
